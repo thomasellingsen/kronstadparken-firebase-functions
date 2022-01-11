@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "baralivetapp",
+    "prod": "kronstadparken-prod"
+  },
+  "targets": {}
+}
