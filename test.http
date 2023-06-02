@@ -1,0 +1,13 @@
+#####
+POST https://us-central1-baralivetapp.cloudfunctions.net/sendMailOverHTTP
+Content-Type: application/json
+
+{
+    "reason": "Cebelle booket",
+    "name": "Thomas Ellingsen",
+    "company": "Testfirma",
+    "email":"test@example.com",
+    "meetingroom": "Cebelle",
+    "from": "12.06.23 16:00",
+    "to": "12.06.23 17:00"
+}

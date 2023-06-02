@@ -1,11 +1,14 @@
 # prerequisites
+
 Install firebase CLI
 npm install -g firebase-tools
 
 # initialize
+
 firebase init
 
 # log in
+
 firebase login
 
 choose
@@ -22,6 +25,6 @@ firebase deploy --only functions
 
 and then
 
-firebase use 
+firebase use
 
-to switch between deploying to dev and prod
+to switch between deploying to default (dev) and prod
