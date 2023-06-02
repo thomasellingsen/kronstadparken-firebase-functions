@@ -36,7 +36,7 @@ exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
     secure: true,
     auth: {
         user: 'thomas@ellingsens.net',
-        pass: 'Hotell5050'
+        pass: '§§§§§'
     }
   });
 
