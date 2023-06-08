@@ -42,7 +42,7 @@ exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
 
   const mailOptions = {
       from: "thomas@ellingsens.net",
-      to: 'thomas@ellingsens.net',
+      to: functions.config().mail.to,
       subject: 'Varsel om booking',
       html: `<h1>Varsel om booking</h1>
                           <p>
