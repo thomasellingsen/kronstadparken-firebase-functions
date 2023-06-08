@@ -35,14 +35,14 @@ exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
     port: 465,
     secure: true,
     auth: {
-        user: 'thomas@ellingsens.net',
-        pass: '§§§§§'
+        user: functions.config().mail.user,
+        pass: functions.config().mail.pwd
     }
   });
 
   const mailOptions = {
       from: "thomas@ellingsens.net",
-      to: 'ingse@bara.no',
+      to: 'thomas@ellingsens.net',
       subject: 'Varsel om booking',
       html: `<h1>Varsel om booking</h1>
                           <p>
