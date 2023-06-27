@@ -31,9 +31,13 @@ exports.authenticateIzy = functions.https.onCall((data, context) => {
 exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
 
   var transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    host: functions.config().mail.smtp,
+    port: 587,
+    secure: false,
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
+      },
     auth: {
         user: functions.config().mail.user,
         pass: functions.config().mail.pwd
@@ -41,7 +45,7 @@ exports.sendMailOverHTTP = functions.https.onRequest((req, res) => {
   });
 
   const mailOptions = {
-      from: "thomas@ellingsens.net",
+      from: functions.config().mail.user,
       to: functions.config().mail.to,
       subject: 'Varsel om booking',
       html: `<h1>Varsel om booking</h1>
